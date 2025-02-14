@@ -1,6 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 vector<int> adj_list[1000001];
+
 bool vis[1000001];
 
 int main()
@@ -14,6 +15,7 @@ int main()
         adj_list[a].push_back(b);
     }
     int q, node1, node2;
+
     cin >> q;
     while (q--)
     {
@@ -36,6 +38,7 @@ int main()
                     break;
                 }
             }
+
             if (isTrue)
             {
                 cout << "NO" << endl;
