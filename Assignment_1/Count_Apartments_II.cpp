@@ -4,6 +4,7 @@ char grid[1005][1005];
 bool vis[1005][1005];
 int N, M, room = 0;
 vector<pair<int, int>> par = {{-1, 0}, {1, 0}, {0, 1}, {0, -1}};
+
 bool isValid(int sr, int sc)
 {
     if (sr < 0 || sr >= N || sc < 0 || sc >= M)
@@ -20,11 +21,13 @@ void dfs(int si, int sj)
     {
         int ci = si + par[i].first;
         int cj = sj + par[i].second;
+
         if (isValid(ci, cj) && !vis[ci][cj] && grid[ci][cj] == '.')
         {
             dfs(ci, cj);
         }
     }
+    
 };
 int main()
 {
@@ -36,9 +39,11 @@ int main()
             cin >> grid[i][j];
         }
     }
+
     memset(vis, false, sizeof(vis));
 
     vector<int> total_room;
+
     for (int i = 0; i < N; i++)
     {
         for (int j = 0; j < M; j++)
@@ -51,6 +56,9 @@ int main()
             }
         }
     }
+
+
+
     int len = total_room.size();
     if (len > 0)
     {
