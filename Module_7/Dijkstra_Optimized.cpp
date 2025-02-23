@@ -9,16 +9,19 @@ void Dijkstra(int src)
 
     pq.push({0, src});
     dis[src] = 0;
-    while(!pq.empty()){
+    while (!pq.empty())
+    {
         auto par = pq.top();
         pq.pop();
         int par_dis = par.first;
         int par_node = par.second;
 
-        for(auto child: adj_list[par_node]){
+        for (auto child : adj_list[par_node])
+        {
             int child_node = child.first;
             int child_dis = child.second;
-            if(par_dis + child_dis < dis[child_node]){
+            if (par_dis + child_dis < dis[child_node])
+            {
                 dis[child_node] = par_dis + child_dis;
                 pq.push({dis[child_node], child_node});
             }
@@ -34,7 +37,7 @@ int main()
         int a, b, c;
         cin >> a >> b >> c;
         adj_list[a].push_back({b, c});
-        adj_list[b].push_back({a, c});
+        // adj_list[b].push_back({a, c});
     }
 
     for (int i = 0; i < n; i++)

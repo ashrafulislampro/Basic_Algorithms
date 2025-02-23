@@ -1,0 +1,1 @@
+{"name":"Local: Chocolates","url":"/home/ashraful-islam/Documents/Basic_Algorithm/Chocolates.cpp","tests":[{"id":1740152167723,"input":"3\n45\n48\n50","output":"13\n13\n14"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/home/ashraful-islam/Documents/Basic_Algorithm/Chocolates.cpp","group":"local","local":true}
