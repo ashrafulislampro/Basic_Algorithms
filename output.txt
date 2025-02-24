@@ -1,1 +1,5 @@
-Negative weighted cycle detect
+5
+5
+8
+-1
+3
