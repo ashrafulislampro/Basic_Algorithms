@@ -9,7 +9,7 @@ void dfs(int src)
     vis[src] = true;
     for (int child : adj_list[src])
     {
-        if (child != -1 && !vis[child])
+        if(child != -1 && !vis[child])
             dfs(child);
     }
 };
